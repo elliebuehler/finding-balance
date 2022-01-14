@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { resolve } from 'url'
 
 import { Navigation } from '@components/Navigation'
+import { SecondaryNavigation } from './SecondaryNavigation'
 import { SocialLinks } from '@components/SocialLinks'
 import { DarkMode } from '@components/DarkMode'
 import { SubscribeButton } from '@components/SubscribeButton'
@@ -91,7 +92,7 @@ export const SiteNav = ({ settings, className, postTitle }: SiteNavProps) => {
       </div>
       <div className="site-nav-right">
         {secondaryNav ? (
-          <Navigation data={site.secondary_navigation} />
+          <SecondaryNavigation data={site.secondary_navigation} />
         ) : (
           <div className="social-links">
             <SocialLinks {...{ siteUrl, site }} />
